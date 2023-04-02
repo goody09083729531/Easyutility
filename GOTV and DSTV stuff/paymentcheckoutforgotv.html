@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CardBook Checkout</title>
+    <link rel="stylesheet" href="/GOTV and DSTV stuff/paymentcheckoutforgotv.css">
+</head>
+<body>
+    <div class="container">
+        <form action="">
+        <h1>CardBook Checkout</h1>
+        <div class="row">
+            <div class="col">
+                <div class="inputBox" style="padding-bottom: 120px;">
+                    <span>Provider: </span>
+                    <select id="multichoiceselect">
+                        <option value="1">Select Decoder Type..</option>
+                        <option value="2">GOTV</option>
+                        <option value="3">DSTV</option>
+                        <option value="4">STARTIMES ANTENNA DECODER BOUQUET</option>
+                        <option value="4">STARTIMES DISH DECODER BOUQUET</option>
+                        <option value="5">TSTV</option>
+                    </select>
+                </div>
+                <div class="inputBox" style="padding-bottom: 140px;">
+                    <span>Package: </span>
+                    <select id="mySelect"></select>
+                </div>
+            </div>
+        </div>
+        <p style="padding-bottom: 10px; font-weight: 900; font-family: var(--Livvic);" id="demo"></p>
+        <input id="proceeder" type="button" value="Proceed to Payment" class="submit-btn">
+        <input onclick="window.location.href='/index.html'" type="button" value="Back to Home" class="home-btn">
+        </form>
+    </div>
+
+    <script src="/GOTV and DSTV stuff/paymentcheckoutforgotv.js"></script>
+</body>
+</html>

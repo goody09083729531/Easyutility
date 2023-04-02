@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CardBook Biller</title>
+    <link rel="stylesheet" href="/GOTV and DSTV stuff/paymentgatewayfordstvcompact.css">
+</head>
+<body>
+    <div class="container">
+        <form action="">
+        <h1>CardBook Biller</h1>
+        <div class="row">
+            <div class="col">
+                <div class="inputBox">
+                    <span>Provider: </span>
+                    <input style="font-weight: 700;" type="text" value="DSTV" readonly>
+                </div>
+                <div class="inputBox">
+                    <span>Product: </span>
+                    <input style="font-weight: 700;" type="text" value="DSTV COMPACT" readonly>
+                </div>
+                <div class="inputBox">
+                    <span>Full Name: </span>
+                    <input type="text" placeholder="Mike John">
+                </div>
+                <div class="inputBox">
+                    <span>E-Mail: </span>
+                    <input type="email" placeholder="mikejohn@example.com">
+                </div>
+                <div class="inputBox">
+                    <span>Address: </span>
+                    <input type="text" placeholder="17 Ajao Road">
+                </div>
+                
+                <div class="flex">
+                    <div class="inputBox">
+                        <span>City: </span>
+                        <input type="text" placeholder="Ikeja">
+                    </div>
+                    <div class="inputBox">
+                        <span>State: </span>
+                        <input type="text" placeholder="Lagos">
+                    </div>
+                </div>
+            </div>
+
+            
+            <div class="col">
+                <div class="inputBox">
+                    <span>Scratch Card Number: </span>
+                    <input type="number" value="" placeholder="0123 456 789">
+                </div>
+                <div class="inputBox">
+                    <span>Amount: </span>
+                    <input type="number" value="9000" readonly>
+                </div>
+                <div class="inputBox">
+                    <span>Payment Methods: </span>
+                    <img src="/images/Payment icon.png" alt="">
+                </div>
+                <div class="inputBox">
+                    <span>Bank Card Name: </span>
+                    <input type="text" placeholder="Mike John">
+                </div>
+                <div class="inputBox">
+                    <span>Bank Card Number: </span>
+                    <input type="number" placeholder="1111 2222 3333 4444">
+                </div>
+                
+                <div class="flex">
+                    <div class="inputBox">
+                        <span>Expiry Date: </span>
+                        <input type="text" placeholder="MM/YY">
+                    </div>
+                    <div class="inputBox">
+                        <span>CVV: </span>
+                        <input type="number" placeholder="123">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <input type="submit" value="Make Your Payment" class="submit-btn">
+        <input onclick="window.history.back();" type="button" value="Back to Checkout" class="checkout-btn">
+        <input onclick="window.location.href='/index.html'" type="button" value="Back to Home" class="home-btn">
+        </form>
+    </div>
+</body>
+</html>
