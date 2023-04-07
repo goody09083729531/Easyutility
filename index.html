@@ -82,15 +82,15 @@
         <div class="row mx-auto contain2">
             <div class="product text-center col-lg-4 col-md-6 col-12">
                 <img class="img-fluid mb-3" src="/images/Waec Pic.jpg" alt="">
-                <h5 class="p-name">WAEC RESULT TOKEN</h5>
+                <h5 class="p-name">WAEC RESULT CHECKER</h5>
                 <h4 class="p-price">3000</h4>
-                <button class="buy-btn">Buy Now</button>
+                <button onclick="window.location.href='/WAEC TOKEN/waec.html'" class="buy-btn">Buy Now</button>
             </div>
             <div class="product text-center col-lg-4 col-md-6 col-12">
                 <img class="img-fluid mb-3" src="/images/Neco Logo.jpg" alt="">
-                <h5 class="p-name">NECO RESULT TOKEN</h5>
+                <h5 class="p-name">NECO RESULT CHECKER</h5>
                 <h4 class="p-price">3000</h4>
-                <button class="buy-btn">Buy Now</button>
+                <button onclick="window.location.href='/NECO TOKEN/neco.html'" class="buy-btn">Buy Now</button>
             </div>
             <div class="product text-center col-lg-4 col-md-6 col-12">
                 <img class="img-fluid mb-3" src="/images/GOTV_and_dstv-transformed.png" alt="">
@@ -127,7 +127,7 @@
                     <p><i class="fas fa-paper-plane"></i> wobogoodnessg@gmail.com</p>
                     <p><i class="fas fa-phone"></i> +234-908-372-9531</p>
                     <div class="social-icons">
-                        <a href="https://web.facebook.com/profile.php?id=100090532865559"><i class="fab fa-facebook"></i></a>
+                        <a id="gmail-link" href="#"><i class="fab fa-facebook"></i></a>
                         <a href="https://mail.google.com/mail/u/0/?pli=1#inbox?compose=GTvVlcSDbFhNlwjPdvTzWCZdhkHfkDtTTpLjzPJZvFPWkPSHbhrRMQgjnjdRCJwHcQmBdrcnVhqSF"><i class="fas fa-envelope"></i></i></a>
                         <a href="https://wa.me/2349083729531"><i class="fab fa-whatsapp"></i></a>
                         <a href="https://www.linkedin.com/in/goodness-wobo-464936260/"><i class="fab fa-linkedin"></i></a>
@@ -151,6 +151,16 @@
 
     <script src="/JS/bootstrap.min.js"></script>
     <script src="/JS/index.js"></script>
+
+    <script> 
+        const link = document.getElementById("gmail-link"); 
+        
+        if(/(android|iphone|ipad)/i.test(navigator.userAgent)){ 
+            link.href = "googlegmail://co?to=your.wobogoodnessg@gmail.com"; 
+        }else{ 
+            link.href = "https://mail.google.com/mail/"; 
+        }
+    </script>
 
     <script>
         window.addEventListener("scroll", function() {
