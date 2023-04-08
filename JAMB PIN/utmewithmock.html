@@ -5,7 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EasyUtility Biller</title>
-    <link rel="stylesheet" href="/JAMB PIN/jamb.css">
+    <link rel="stylesheet" href="/JAMB PIN/utmewithmock.css">
+    <link rel="stylesheet" href="/CSS/all.css">
 </head>
 <body>
     <div class="container">
@@ -14,12 +15,16 @@
         <div class="row">
             <div class="col">
                 <div class="inputBox">
-                    <span>Product: </span>
-                    <input style="font-weight: 700;" type="text" value="WAEC RESULT CHECKER" readonly>
+                    <span>PIN Choice: </span>
+                    <input style="font-weight: 700;" type="text" value="UTME with MOCK" readonly>
                 </div>
                 <div class="inputBox">
                     <span>Quantity: </span>
                     <input id="quantity" type="number" min="1" step="1" value="1">
+                </div>
+                <div class="inputBox">
+                    <span>Full Name: </span>
+                    <input type="text" placeholder="Mike John">
                 </div>
                 <div class="inputBox">
                     <span>E-Mail: </span>
@@ -46,7 +51,11 @@
             <div class="col">
                 <div class="inputBox">
                     <span>Amount: </span>
-                    <input id="amount" type="number" value="3150" readonly>
+                    <input id="amount" type="number" value="6700" readonly>
+                </div>
+                <div class="inputBox">
+                    <span>Profile Code: </span>
+                    <input type="number" placeholder="1234567890">
                 </div>
                 <div class="inputBox">
                     <span>Payment Methods: </span>
@@ -75,9 +84,32 @@
         </div>
 
         <input type="submit" value="Make Your Payment" class="submit-btn">
+        <input onclick="window.history.back();" type="button" value="Back to Checkout" class="checkout-btn">
         <input onclick="window.location.href='/index.html'" type="button" value="Back to Home" class="home-btn">
         </form>
     </div>
+
+    <i id="scrollToTopBtn" class="fa-solid fa-arrow-up"></i>
+
+    <script>
+        const scrollTrigger = 30;
+        const scrollToTopBtn = document.getElementById("scrollToTopBtn");
+
+        window.addEventListener('scroll', function() {
+			if (window.pageYOffset > scrollTrigger) {
+				scrollToTopBtn.style.display = 'block';
+			} else {
+				scrollToTopBtn.style.display = 'none';
+			}
+		});
+		
+		scrollToTopBtn.addEventListener('click', function() {
+			window.scrollTo({
+				top: 0,
+				behavior: 'smooth'
+			});
+		});
+    </script>
 
     <script>
         const quanty = document.getElementById("quantity");
@@ -92,27 +124,8 @@
             if (event.target.value < 0) {
                 event.target.value = 1; 
             }
-            amon.value = +quanty.value * 3150;
+            amon.value = +quanty.value * 6700;
         });
-
-        
-        // quanty.addEventListener("input", function(){
-        //     const currentValue = parseInt(quanty.value);
-        //     if(currentValue < 0) {
-        //         quanty.value = 0;
-        //     }
-        //     amon.value = +quanty.value * 3000;
-        // });
-        // quanty.addEventListener("keydown", function(e){
-        //     const currentValue = parseInt(quanty.value);
-        //     const keypressed = parseInt(e.key);
-
-        //     if(currentValue < 0 || (keypressed >= 0 && keypressed <= 9)){
-        //         return;
-        //     }else{
-        //         e.preventDefault();
-        //     }
-        // });
     </script>
 </body>
 </html>

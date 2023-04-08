@@ -1,0 +1,165 @@
+@import url("/CSS/fonts.css");
+
+:root{
+    /* Font Family */
+    --Livvic: 'Livvic', cursive;
+    --Abel: 'Abel', cursive;
+    --Clicker: 'Clicker', cursive;
+}
+
+*{
+    font-family: var(--Livvic);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    transition: all .2s linear;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+    min-height: 100vh;
+    background: linear-gradient(90deg, #008080 60%, #045d5d 40.1%);
+    padding-bottom: 70px;
+}
+
+.container form{
+    padding: 20px;
+    width: 700px;
+    background: #fff;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .1);
+}
+
+.container form .row{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.container form h1{
+    font-size: 30px;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: var(--Abel);
+}
+
+.container form .row .col{
+    flex: 1 1 250px;
+}
+
+.container form .row .col .inputBox{
+    margin: 15px 0;
+}
+
+.container form .row .col .inputBox span{
+    margin-bottom: 10px;
+    display: block;
+}
+
+.container form .row .col .inputBox input{
+    width: 100%;
+    border: 1px solid #ccc;
+    padding: 10px 15px;
+    font-size: 15px;
+}
+
+.container form .row .col .inputBox input:focus{
+    border: 1px solid #000;
+}
+
+.container form .row .col .inputBox select{
+    width: 100%;
+    border: 1px solid #ccc;
+    padding: 10px 15px;
+    font-size: 15px;
+}
+
+.container form .row .col .inputBox select:focus{
+    border: 1px solid #000;
+}
+
+.container form .row .col .inputBox select:hover{
+    cursor: pointer;
+}
+
+.container form .row .col .flex{
+    display: flex;
+    gap: 15px;
+}
+
+.container form .row .col .flex .inputBox{
+    margin-top: 5px;
+}
+
+img{
+    width: 185px;
+    filter: drop-shadow(0 0 1px #000);
+}
+
+.container form .submit-btn{
+    width: 100%;
+    padding: 12px;
+    font-size: 17px;
+    background: teal;
+    color: white;
+    cursor: pointer;
+    margin-top: 5px;
+}
+
+.container form .home-btn{
+    width: 100%;
+    padding: 12px;
+    font-size: 17px;
+    background: teal;
+    color: white;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.container form .checkout-btn{
+    width: 100%;
+    padding: 12px;
+    font-size: 17px;
+    background: teal;
+    color: white;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.container form .checkout-btn:hover,
+.container form .home-btn:hover,
+.container form .submit-btn:hover{
+    background: #045d5d;
+}
+
+#me::-webkit-outer-spin-button,
+#me::-webkit-inner-spin-button{
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+#scrollToTopBtn {
+    display: none;
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: teal;
+    color: white;
+    text-align: center;
+    font-size: 20px;
+    line-height: 50px;
+    cursor: pointer;
+    transition: opacity 0.2s ease-in-out;
+    border: 2px solid black;
+}
+  
+#scrollToTopBtn:hover {
+    opacity: 0.8;
+}
