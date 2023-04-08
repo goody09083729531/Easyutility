@@ -239,6 +239,7 @@ nav ul li a:hover:after{
 
 .product .buy-btn{
     background: teal;
+    margin-top: 10px;
 }
 
 .product .buy-btn:hover{

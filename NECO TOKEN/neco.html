@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EasyUtility Biller</title>
     <link rel="stylesheet" href="/NECO TOKEN/neco.css">
+    <link rel="stylesheet" href="/CSS/all.css">
 </head>
 <body>
     <div class="container">
@@ -78,6 +79,28 @@
         <input onclick="window.location.href='/index.html'" type="button" value="Back to Home" class="home-btn">
         </form>
     </div>
+
+    <i id="scrollToTopBtn" class="fa-solid fa-arrow-up"></i>
+
+    <script>
+        const scrollTrigger = 30;
+        const scrollToTopBtn = document.getElementById("scrollToTopBtn");
+
+        window.addEventListener('scroll', function() {
+			if (window.pageYOffset > scrollTrigger) {
+				scrollToTopBtn.style.display = 'block';
+			} else {
+				scrollToTopBtn.style.display = 'none';
+			}
+		});
+		
+		scrollToTopBtn.addEventListener('click', function() {
+			window.scrollTo({
+				top: 0,
+				behavior: 'smooth'
+			});
+		});
+    </script>
 
     <script>
         const quanty = document.getElementById("quantity");

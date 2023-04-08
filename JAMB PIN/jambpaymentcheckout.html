@@ -10,16 +10,16 @@
 <body>
     <div class="container">
         <form action="">
-        <h1>CardBook Checkout</h1>
+        <h1>E-UTILITY Checkout</h1>
         <div class="row">
             <div class="col">
                 <div class="inputBox" style="padding-bottom: 120px;">
-                    <span>Product: </span>
-                    <select id="multichoiceselect">
-                        <option value="1">Select Decoder Type..</option>
-                        <option value="2">WITH MOCK</option>
-                        <option value="3">WITHOUT MOCK</option>
-                        <option value="4">DE</option>
+                    <span>PIN Choice: </span>
+                    <select id="jambselect">
+                        <option value="1">Select Pin Choice..</option>
+                        <option value="2">UTME with MOCK - ₦ 6,700</option>
+                        <option value="3">UTME WITHOUT MOCK - ₦ 5,700</option>
+                        <option value="4">Direct Entry - ₦ 4,700</option>
                     </select>
                 </div>
             </div>
@@ -31,5 +31,19 @@
     </div>
 
     <script src="/GOTV and DSTV stuff/paymentcheckoutforgotv.js"></script>
+    <script>
+        const selectjamb = document.getElementById("jambselect");
+        const proceeder = document.getElementById("proceeder");
+
+        proceeder.addEventListener("click", function(){
+            if(selectjamb.value == 2){
+                window.location.href="/JAMB PIN/utmewithmock.html";
+            }else if(selectjamb.value == 3){
+                window.location.href="/JAMB PIN/utmewithoutmock.html";
+            }else if(selectjamb.value == 4){
+                window.location.href="/JAMB PIN/directentry.html";
+            }
+        });
+    </script>
 </body>
 </html>

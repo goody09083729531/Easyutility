@@ -7,6 +7,7 @@
     <title>EasyUtility Biller</title>
     <link rel="stylesheet" href="/WAEC TOKEN/waec.css">
     <link rel="stylesheet" href="/WAEC TOKEN/all.css">
+    <link rel="stylesheet" href="/CSS/all.css">
 </head>
 <body>
     <div class="container">
@@ -80,6 +81,28 @@
         </form>
     </div>
 
+    <i id="scrollToTopBtn" class="fa-solid fa-arrow-up"></i>
+
+    <script>
+        const scrollTrigger = 30;
+        const scrollToTopBtn = document.getElementById("scrollToTopBtn");
+
+        window.addEventListener('scroll', function() {
+			if (window.pageYOffset > scrollTrigger) {
+				scrollToTopBtn.style.display = 'block';
+			} else {
+				scrollToTopBtn.style.display = 'none';
+			}
+		});
+		
+		scrollToTopBtn.addEventListener('click', function() {
+			window.scrollTo({
+				top: 0,
+				behavior: 'smooth'
+			});
+		});
+    </script>
+
     <script>
         const quanty = document.getElementById("quantity");
         const amon = document.getElementById("amount");
@@ -95,25 +118,6 @@
             }
             amon.value = +quanty.value * 3150;
         });
-
-        
-        // quanty.addEventListener("input", function(){
-        //     const currentValue = parseInt(quanty.value);
-        //     if(currentValue < 0) {
-        //         quanty.value = 0;
-        //     }
-        //     amon.value = +quanty.value * 3000;
-        // });
-        // quanty.addEventListener("keydown", function(e){
-        //     const currentValue = parseInt(quanty.value);
-        //     const keypressed = parseInt(e.key);
-
-        //     if(currentValue < 0 || (keypressed >= 0 && keypressed <= 9)){
-        //         return;
-        //     }else{
-        //         e.preventDefault();
-        //     }
-        // });
     </script>
 </body>
 </html>
